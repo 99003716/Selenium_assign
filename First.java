@@ -41,6 +41,20 @@ public class First {
 		mydriver.findElement(By.className("password_step_input")).sendKeys("Bagal@arpi#2018");
 		
 		
+		Select dd = new Select(mydriver.findElement(By.id("day")));
+		dd.selectByValue("1");//Enter date
+		Select mm = new Select(mydriver.findElement(By.id("month")));
+		mm.selectByValue("9");//Enter month
+		Select yy = new Select(mydriver.findElement(By.id("year")));
+		yy.selectByValue("1998");//Enter year
+		
+		WebElement radio1 = mydriver.findElement(By.cssSelector("input[value='2']"));
+		radio1.click();//Select Gender
+		
+		Thread.sleep(3000);
+		mydriver.findElement(By.name("websubmit")).click();//Click Sign up
+		
+		
 	
 	}
 
